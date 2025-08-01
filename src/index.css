@@ -1,0 +1,566 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Baloo 2", cursive;
+  font-optical-sizing: auto;
+  font-weight: "weight";
+}
+
+/* Header Layout */
+.Header {
+  background-color: #222;
+  padding: 12px 30px;
+  color: white;
+  position: relative;
+}
+
+/* Top Row Layout */
+.HeaderTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* Logo Styling */
+.Logo {
+  height: 50px;
+}
+
+/* Nav Links (desktop) */
+.Links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.link:hover {
+  color:black;
+  background-color: #ffd914;
+} 
+
+/* Login/Logout buttons */
+.LogSin {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Links */
+.link, ._signup, ._login {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 6px 10px;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+/* Menu Icon (only for mobile) */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+/* Mobile-only dropdown */
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+/* Hide desktop on small screens */
+@media (max-width: 768px) {
+  .Links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .Logo {
+    height: 40px;
+  }
+
+  .link, ._signup, ._login {
+    font-size: 14px;
+  }
+
+  .dropdown {
+    right: 20px;
+    top: 60px;
+    width: calc(100% - 40px);
+  }
+}
+
+/* 
+.Header {
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: bolder;
+  font-size: 20px;
+  align-items: center;
+}
+
+.link:hover {
+  color: #ffd914;
+}
+
+.Logo {
+  height: 70px;
+  width: 130px;
+} */
+
+._signup {
+  background-color: #ffd914;
+  border-radius: 10%;
+  color: black;
+  text-decoration: none;
+  padding: 7px;
+}
+
+._login {
+  border-radius: 10%;
+  color: white;
+  text-decoration: none;
+  padding: 7px;
+  border:1px solid #ffd914;
+}
+
+._signup:hover {
+  background-color: white;
+  font-weight: bolder;
+}
+
+._login:hover {
+  color: #ffd914;
+  font-weight: bolder;
+}
+
+.LogSin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  font-weight: bolder;
+}
+
+.bus {
+  /* background-image: transparent;
+  opacity: 50%; */
+  width: 100%;
+}
+
+.Welcome {
+  background-image: linear-gradient(to right, #ffa114, #ffd914);
+  padding: 35px 100px 80px 100px;
+  box-shadow: 0 0 50px rgba(5, 5, 5, 5);
+  border-radius: 10px;
+  position: absolute;
+  right: 18.5rem;
+  top: 9.5rem;
+  color: white;
+  font-weight: bolder;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Greet {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  text-shadow: 2px 2px 0 black;
+}
+#Msg {
+  font-size: 20px;
+  color: rgb(52, 52, 52);
+}
+/* Signup */
+.signup {
+  width: 350px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgb(100, 100, 102);
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  position: absolute;
+  right: 27rem;
+  top: 6rem;
+}
+
+.signup-heading {
+  color: #ffd914;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.signup-subheading {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.signup-label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #444;
+  text-align: left;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.signup-button {
+  padding: 10px 20px;
+  background-color: #ffd914;
+  color: rgb(52, 52, 52);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #ffd914;
+}
+
+.HeroSignup {
+  display: flex;
+}
+
+/* Login */
+
+.login {
+   width: 450px;
+  margin: 3px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgb(100, 100, 102);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  position: absolute;
+  right: 27rem;
+  top: 6rem;
+
+}
+
+.login-heading {
+  color: #ffd914;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.login-subheading {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.login-label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #444;
+  text-align: left;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.login-button {
+  padding: 10px 20px;
+  background-color: #ffd914;
+  color: rgb(52, 52, 52);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #ffd914;
+}
+
+.BusImg {
+  width: 100%;
+  height: 565px;
+  /* opacity: 70%; */
+}
+
+.HeroLogin {
+  display: flex;
+}
+
+/* Remove Footer styles that are now in Footer.css */
+/* .footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color:#222222;;
+  color:white;
+  font-size: large;
+  gap: 2rem;
+}
+
+.FList ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.FList li{
+  padding-bottom: 15px;
+}
+
+.PcteLogo{
+  height: 120px;
+  width: 240px;
+}
+*/
+
+.button input {
+  background-color: #222222;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 15rem;
+  top: 25rem;
+}
+
+.learn-more-btn {
+  background: #000;
+  color: #ffd914;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 36px;
+  box-shadow: 0 2px 8px #ffd91433;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  position: absolute;
+  left: 17rem;
+  top: 19rem;
+  z-index: 1;
+}
+
+.learn-more-btn:hover {
+  background:  linear-gradient(to right, #ffa114, #ffd914);
+  color: #222;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 0 6px black;
+}
+
+.home-sections {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  margin-top: 32px;
+  width: 80%;
+  border-radius: 18px;
+  background: transparent;
+  position: absolute;
+  left: 8rem;
+  top: 17rem;
+  background-color: #ffffff;
+  padding: 20px;
+  padding-bottom: 40px;
+  /* box-shadow: 0 0 60px rgb(167, 158, 158); */
+}
+
+.home-section {
+  position: relative;
+  flex: 1 1 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #ffd914;
+  border: 1.5px solid #ffd914;
+  padding: 20px 20px;
+  color: #948a8a;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 400;
+  width: 40rem;
+  min-height: 60px;
+}
+
+/* Search with Select (Home Section) */
+.search-select-group {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 0;
+}
+
+.search-select-input {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+  text-align: center;
+  border: none;
+}
+
+.search-select-input:focus {
+  border: 2px solid #fff;
+  outline: none;
+}
+
+.search-select-dropdown {
+  width: 90%;
+  padding: 8px 12px;
+  border: 1.5px solid #ffd914;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  font-size: 1rem;
+  background: #fffbe7;
+  color: #222;
+  outline: none;
+  cursor: pointer;
+}
+
+.search-select-dropdown:focus {
+  border-color: #ffa114;
+}
+
+/* Autocomplete Dropdown (Home Section) */
+.search-select-dropdown-list {
+  width: 100%;
+  left: 0;
+  top: 100%;
+  position: absolute;
+  margin-top: 0;
+  z-index: 10;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #fffbe7;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+}
+
+.search-select-dropdown-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.search-select-dropdown-item:hover,
+.search-select-dropdown-item:active {
+  background: #ffd914;
+  color: #000;
+}
+
+.check-bus-btn {
+  background: linear-gradient(to right, #ffa114, #ffd914);
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 36px;
+  box-shadow: 0 2px 8px #ffd91433;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin-top: 18px;
+  /* position: absolute;
+  left: 31rem;
+  top: 36rem; */
+}
+
+.check-bus-btn:hover {
+  background: #222;
+  color: #ffd914;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 0 6px #ffd914;
+}
+
+.check-bus-btn-container {
+  position: absolute;
+  top: 90%;
+  left: 37%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Panel switch buttons for Login/Signup (unified style) */
+.panel-btn-custom {
+  background: linear-gradient(to right, #ffa114, #ffd914);
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 24px;
+  margin: 0 8px;
+  box-shadow: 0 2px 8px #ffd91433;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.panel-btn-custom.active {
+  background: #222;
+  color: #ffd914;
+  box-shadow: 0 0 6px #ffd914;
+}
+
+.panel-btn-custom:hover {
+  background: #222;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 0 6px #ffd914;
+}
+
+.panel-switch {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+  gap: 8px;
+}

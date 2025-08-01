@@ -1,0 +1,261 @@
+/* Home Page Custom Styles */
+
+.home-section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.home-section-header-label {
+  font-weight: 600;
+  color: #222;
+  font-size: 1.1rem;
+}
+
+.home-section-bus-info {
+  font-size: 1.2rem;
+  color:  #222;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.home-section-time-info {
+  font-size: 1.2rem;
+  color: #222;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.moving-bus-container {
+  width: 100%;
+  position: relative;
+  height: 10rem;
+  margin-bottom: 14px;
+  
+}
+
+.moving-bus-gif {
+  position: absolute;
+  bottom: 2rem;
+  right: -200px;
+  height: 200px;
+  width: 200px;
+  animation: move-bus 8s linear infinite;
+  z-index: 2;
+}
+
+@keyframes move-bus {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 100vw;
+  }
+}
+
+.wave-divider {
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 49rem;
+  z-index: 1;
+  pointer-events: none;
+
+}
+
+.wave-svg {
+  display: block;
+  width: 100%;
+  height: 120px;
+}
+
+.home {
+  position: relative;
+  z-index: 1;
+}
+
+.WhyBusMate{
+  background-image: linear-gradient(135deg, #fffde9 0%, #fff9e3 30%, #ffeeb2 80%, #ffe29f 100%);
+  position: absolute;
+  top: 6rem; 
+  z-index: -1 ;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 6rem;
+  
+
+ 
+}
+
+.WhyBusMate2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 2rem;
+}
+
+.bus-footer{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 450px;
+} 
+
+.path{
+  width:100%;
+  position: relative;
+  height: 7rem;
+  bottom: 1.5rem;
+  z-index: -1;
+}
+
+.P1{
+   border-radius: 14px;
+  box-shadow: 0 2px 12px black;
+  padding: 20px 20px;
+  background-image: linear-gradient(to right, #ffa114, #ffd914);
+}
+
+.P2{
+ border-radius: 14px;
+  box-shadow: 0 2px 12px black;
+  padding: 20px 20px;
+  background-image: linear-gradient(to right, #ffa114, #ffd914);
+
+}
+
+.Bus2{
+  width:100%;
+  height: 500px;
+  opacity: 50% ;
+  border-radius: 12% 0% 12%0%;
+  padding-top: 0px;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+
+.Shape{
+  height:500px;
+  background-color: #222;
+  border-radius: 13% 0% 0% 0%;
+}
+
+.Img1Shape , .Img2Shape , .Img3Shape{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 90px #ffa114;
+}
+
+.AnimationFor2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 97rem;
+  gap: 8rem;
+  left: 0;
+  width: 100%;
+}
+
+.Shape1, .Shape2, .Shape3 {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 70px;
+  position: relative;
+  top: -90px;
+  left: 0rem;
+  /* Strictly use theme colors: white, yellow, orange */
+  background-image: linear-gradient(135deg, #fff 0%, #ffd914 50%, #ffa114 100%);
+  z-index: 4;
+}
+
+.S3 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 40px;
+  position: absolute;
+  top: 109rem;
+  left: 36rem;
+  z-index: 3;
+}
+
+
+
+#Search-Your-Route , #Find-Your-Bus , #Reach-On-Time{
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#Search-Your-Route {
+  position: absolute;
+  top: 94rem;
+  left: 14rem;
+}
+
+#Find-Your-Bus {
+  position: absolute;
+  top: 112rem;
+  left: 36rem;
+}
+
+#Reach-On-Time {
+  position: absolute;
+  top: 94rem;
+  left: 55rem;
+}
+
+#How-It-Works {
+  position: absolute;
+  top: 85rem;
+  left: 34rem;
+  color: white;;
+}
+
+.Shape1:hover {
+  animation: moveRightRotate 1s cubic-bezier(1,1,1,1) forwards;
+}
+.Shape2:hover {
+  animation: moveLeftRotate 1s cubic-bezier(1,1,1,1) forwards;
+}
+.Shape3:hover {
+  animation: moveUpRotate 1s cubic-bezier(1,1,1,1) forwards;
+}
+
+@keyframes moveRightRotate {
+  0% { transform: rotate(0deg) translateX(0); }
+  100% { transform: rotate(360deg) translateX(2rem); }
+}
+@keyframes moveLeftRotate {
+  0% { transform: rotate(0deg) translateX(0); }
+  100% { transform: rotate(-360deg) translateX(-2rem); }
+}
+@keyframes moveUpRotate {
+  0% { transform: rotate(0deg) translateY(0); }
+  100% { transform: rotate(-360deg) translateY(-2rem); }
+}
+
+#Works {
+  color:#ffd914;
+}
+
+#Bm {
+   color:#ffa114;
+}
+
+.BusStop{
+  width: 50rem;
+  height: 20rem;
+  border-radius: 13px;
+}
